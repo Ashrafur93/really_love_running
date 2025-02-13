@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'home',
     'profiles',
+    'jogging_post',
 ]
 
 SITE_ID = 1
