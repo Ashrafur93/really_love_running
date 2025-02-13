@@ -24,9 +24,14 @@ class Post(models.Model):
     body = models.TextField(max_length=300)
     # partisipant_list = models.ManyToManyField('Profile', related_name='jogging_events', blank=True)
 
+    def __str__(self):
+        return f"{self.title} | {self.location} | {self.day_and_time}"
+
 class Comment(models.Model):
-    profile_image = CloudinaryField('image', default='placeholder')
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     body = models.TextField(max_length=300)
     created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.user.username} | {self.body.replace('<p>', '').replace('</p>', '')[:30]} | {self.created_at}"
     
