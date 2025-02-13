@@ -6,6 +6,8 @@ from cloudinary.models import CloudinaryField
 TYPE_CHOICES = [
         ('Urban', 'Urban'),
         ('Trail', 'Trail'),
+        ('Track', 'Track'),
+        ('Canals', 'Canals'),
         ('Coffee', 'Coffee'),
     ]
 
@@ -17,6 +19,7 @@ DISTANCE_CHOICES = [
 
 class Post(models.Model):
     title = models.CharField(max_length=100, default='Jogging Event')
+    # slug = models.SlugField(max_length=200, unique=True)
     type = models.CharField(max_length=6, choices=TYPE_CHOICES, default='Urban')
     distance = models.FloatField(default=0.0)
     distance_unit = models.CharField(max_length=2, choices=DISTANCE_CHOICES, default='KM')

@@ -3,5 +3,11 @@ from django.http import HttpResponse
 
 # Create your views here.
 
+class HomeList:
+    template_name = "home/index.html"
+
 def home(request):
-    return HttpResponse("Hello")
+    return render(
+        request,
+        "home/index.html",
+    )
