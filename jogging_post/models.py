@@ -2,6 +2,7 @@ from django.db import models
 from django.conf import settings
 from cloudinary.models import CloudinaryField
 
+
 TYPE_CHOICES = [
         ('Urban', 'Urban'),
         ('Trail', 'Trail'),
@@ -18,13 +19,13 @@ DISTANCE_CHOICES = [
 
 class Post(models.Model):
     title = models.CharField(max_length=100, default='Jogging Event')
-    # slug = models.SlugField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
     type = models.CharField(max_length=6, choices=TYPE_CHOICES, default='Urban')
     distance = models.FloatField(default=0.0)
     distance_unit = models.CharField(max_length=2, choices=DISTANCE_CHOICES, default='KM')
     day_and_time = models.DateTimeField(default=None)
     location = models.CharField(max_length=100, default='Birmingham, City Centre, B1 1AA')
-    location_url = models.URLField(max_length=200, blank=True)
+    location_url = models.URLField(max_length=200, blank=True, default='https://maps.app.goo.gl/j4xrUjyJCYmN6guS9')
     body = models.TextField(max_length=300)
     # partisipant_list = models.ManyToManyField('Profile', related_name='jogging_events', blank=True)
 
