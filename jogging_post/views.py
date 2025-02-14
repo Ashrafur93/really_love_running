@@ -1,3 +1,10 @@
 from django.shortcuts import render
 
-# Create your views here.
+class PostList:
+    template_name = "jogging_post/jogging_post.html"
+
+def jogging_post (request):
+    return render(
+        request,
+        "jogging_post/jogging_post.html",
+    )
