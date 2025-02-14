@@ -20,10 +20,10 @@ from home import views as home_views
 
 urlpatterns = [
     path("", home_views.home, name='home'),
+    path("home/", include("home.urls"), name="gallery-urls"),
     path("jogging_post/", include("jogging_post.urls"), name="jogging_post-urls"),
     path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
     path("profiles/", include("profiles.urls"), name="profiles-urls"),
-    path("jogging_post/", include("jogging_post.urls"), name="jogging_post-urls"),
 ]
