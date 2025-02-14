@@ -4,10 +4,46 @@
 
 <!-- Main content -->
 <main>
-    <p>Type |</p>
-    <p>Distance |</p>
-    <p>Date | </p>
-    <p>Location |</p>
+    <!-- Meet details section -->
+    <section>
+        <div class="container">
+            <h1>Meet Details</h1>
+            <p>Type | {{ post.type }}</p>
+            <p>Distance | {{ post.distance }}{{ post.distance_unit }}</p>
+            <p>Date | {{ post.day_and_time }}</p>
+            <p>Location | {{ post.location }}</p>
+        </div>
+        <div class="container">
+            <p>Details:</p>
+            <p>{{ post.body }}</p>
+        </div>
+        <div class="container">
+            <p>Map:</p>
+            <p>{{ post.location_url }}</p>
+        </div>
+    </section>
+    <!-- Comments section -->
+    <section>
+        <div class="container">
+            <h2>Chat/Comments</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="comment" class="form-label">Add a comment</label>
+                    <textarea class="form-control" id="comment" name="comment" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <div class="container">
+                <h3>Comments:</h3>
+                {% for comment in comments %}
+                <p>{{ comment.body }}</p>
+                <p>Comment by: {{ comment.user }}</p>
+                <p>On: {{ comment.created_at }}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
 </main>
 
 {% endblock %}
