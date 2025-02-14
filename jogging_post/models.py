@@ -16,6 +16,15 @@ DISTANCE_CHOICES = [
         ('MI', 'Miles'),
     ]
 
+DAY_CHOICES = [
+    ('Monday', 'Monday'),
+    ('Tuesday', 'Tuesday'),
+    ('Wednesday', 'Wednesday'),
+    ('Thursday', 'Thursday'),
+    ('Friday', 'Friday'),
+    ('Saturday', 'Saturday'),
+    ('Sunday', 'Sunday'),
+]
 
 class Post(models.Model):
     title = models.CharField(max_length=100, default='Jogging Event')
@@ -24,9 +33,14 @@ class Post(models.Model):
     distance = models.FloatField(default=0.0)
     distance_unit = models.CharField(max_length=2, choices=DISTANCE_CHOICES, default='KM')
     day_and_time = models.DateTimeField(default=None)
+    time = models.TimeField(default=None, null=True)
+    day = models.CharField(choices=DAY_CHOICES, default='Monday')
     location = models.CharField(max_length=100, default='Birmingham, City Centre, B1 1AA')
     location_url = models.URLField(max_length=200, blank=True, default='https://maps.app.goo.gl/j4xrUjyJCYmN6guS9')
     body = models.TextField(max_length=300)
+    background_image = CloudinaryField('image', default='placeholder')
+    icon = models.TextField(max_length=300, default='fa-solid fa-city')
+    banner_image = CloudinaryField('image', default='placeholder')
     # partisipant_list = models.ManyToManyField('Profile', related_name='jogging_events', blank=True)
 
     def __str__(self):
