@@ -51,22 +51,24 @@
         <h2 class="hidden-heading">Meet-up Times</h2>
         <div class="container">
             <div class="row justify-content-center">
-                {% for post in posts %}
-                    <div class="card-container col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-2">
-                        <!-- URL below needs to be in URLs -->
-                        <a href="{% url 'post_detail' post.slug %}" class="card-link">
-                            <div class="card text-white">
-                                <img src="{{post.background_image.url}}" class="card-img" alt="Urban Run image - Digbeth Streets">
-                                <div class="card-img-overlay d-flex flex-column justify-content-center text-center">
-                                    <h5 class="card-title fs-5">{{post.type}} <i class="{{post.icon}}"></i></h5>
-                                    <p class="card-text lh-1">{{post.day}}</p>
-                                    <p class="card-text lh-1">{{post.distance}}{{post.distance_unit}}</p>
-                                    <p class="card-text lh-1">{{post.location_short}}</p>
-                                    <p class="card-text lh-1">{{post.time}}</p>
+                {% for post in posts|dictsort:"id"|dictsort:"day_int" %}
+                    {% if post.enabled %}
+                        <div class="card-container col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-2">
+                            <!-- URL below needs to be in URLs -->
+                            <a href="{% url 'post_detail' post.slug %}" class="card-link">
+                                <div class="card text-white">
+                                    <img src="{{post.background_image.url}}" class="card-img" alt="Urban Run image - Digbeth Streets">
+                                    <div class="card-img-overlay d-flex flex-column justify-content-center text-center">
+                                        <h5 class="card-title fs-5">{{post.type}} <i class="{{post.icon}}"></i></h5>
+                                        <p class="card-text lh-1">{{post.day}}</p>
+                                        <p class="card-text lh-1">{{post.distance}}{{post.distance_unit}}</p>
+                                        <p class="card-text lh-1">{{post.location_short}}</p>
+                                        <p class="card-text lh-1">{{post.time}}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
+                            </a>
+                        </div>
+                    {% endif %}
                 {% endfor %}
             </div>
         </div>
