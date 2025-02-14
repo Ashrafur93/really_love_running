@@ -51,26 +51,28 @@ header a {
     font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
+    display: flex;
+    justify-content: flex-end; /* Align links to the right */
 }
 
 #menu > li {
-    margin-bottom: 1em;
+    margin-left: 1rem; /* Add spacing between nav items */
 }
 
 .active {
     border-bottom: 1px solid #3a3a3a;
 }
 
+.navbar {
+    padding: 0;
+}
+
 /* Navbar styles with dropdown toggle */
 nav {
-    position: absolute;
     background-color: #ffffff;
     width: 100%;
-    left: 0;
     padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
-    display: none;
-    top: 100%;
 }
 
 /* Nav toggle*/
@@ -80,10 +82,24 @@ nav {
 
 #nav-toggle {
     display: none;
+    margin-left: auto;
 }
 
 .nav-toggle-label {
     font-size: 2rem;
+}
+
+.login-status {
+    border-bottom: #252525 2px solid;
+}
+
+#header-and-messages {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    border-bottom: 2px solid #252525; /* Add the bottom border */
+    background-color: #ffffff; /* Ensure the background color is set */
 }
 
 /*Main content */
@@ -91,7 +107,7 @@ main {
     /* Enlarge main element to push footer down */
     flex: 1 0 auto;
     /* Add margin at the top to prevent content from being covered by the header */
-    margin-top: 47px;
+    /* padding-top: 80px; */
     /* Enable flex properties for child elements */
     display: flex;
     flex-direction: column;
@@ -103,6 +119,7 @@ main {
     width: 100%;
     background: url("../images/cursed/CursedHeroImage.jpg") no-repeat center center/cover;
     position: relative;
+    /* padding-top: 119px; */
 }
 
 #cover-text {
@@ -195,7 +212,7 @@ main {
 #signup {
     background-image: url(../images/cursed/SignUpAsh.jpg);
     background-size: cover;
-    padding: 20px 10% 0 10%;
+    padding: 140px 10% 0 10%;
     background-position: 75%;
     flex-grow: 1;
 }
@@ -209,6 +226,12 @@ main {
 #signup-form > h2 {
     color: #fafafa;
     padding-bottom: 20px;
+}
+
+#sign-up-box {
+    border: #FFFFFF 1px solid;
+    background-color: rgba(60, 60, 60, 0.6);
+    color: #fafafa;
 }
 
 .text-input {
@@ -240,7 +263,7 @@ main {
 /* Footer */
 #social-networks {
     text-align: center;
-    padding: 20px 0;
+    /* padding: 20px 0; */
     display: flex;
     justify-content: space-evenly;
     list-style: none;
@@ -290,7 +313,7 @@ main {
     }
 
     #menu > li {
-        padding-left: 1rem;
+        margin-left: 1rem;
     }
 
     .nav-toggle-label {
@@ -301,12 +324,13 @@ main {
         font-size: 280%;
         line-height: 75px;
         margin: 0 0.5rem;
+        margin-right: auto;
     }
 
     /* Main content */
     main {
         /* Push main content down to accomodate larger header */
-        margin-top: 79px;
+        /* margin-top: 79px; */
     }
 
     /* Hero */
@@ -338,7 +362,7 @@ main {
     }
 
     /*Signup Page*/
-    #signup {
+    /* #signup {
         background-position: center;
         position: relative;
     }
@@ -357,7 +381,7 @@ main {
     .join-button:hover {
         background-color: #fafafa;
         color: #454b1b;
-    }
+    } */
 
 
 }
