@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- Main content -->
+ <main>
+    <section id="profile">
+        <div class="container">
+            <h1>Profile Page</h1>
+            <h2>Profile Picture</h2>
+            <div class="col-12 col-md-4 text-center mb-2">
+                {% if "placeholder" in about.profile_image.url %}
+                <img src="{% static 'assets/images/placeholder.png' %}" style="width: 75%;"
+                    alt="placeholder for missing profile image">
+                {% else %}
+                <img src="{{ profile.profile_image.url }}" style="width: 75%;"
+                    alt="{{ profile.title }} image of Charles">
+                {% endif %}
+                </div>
+            <!-- Form to upload/change profile picture -->
+            <h2>Change Profile Picture</h2>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="profile_image" class="form-label">Upload New Profile Picture</label>
+                    <input type="file" class="form-control" id="profile_image" name="profile_image">
+                </div>
+                <button type="submit" class="btn btn-primary">Upload</button>
+            </form>
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <h2>Profile</h2>
+                    <p>Username: {{ user.username }}</p>
+                    <p>Name: {{ user.name }}</p>
+                    <p>Birthdate: {{ user.birthdate }}</p>
+                    <p>Location: {{ user.location }}</p>
+                    <p>Favourite Run: {{ user.favourite_run }}</p>
+                    <p>Favourite song to run to: {{ user.song }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <h2>About Me</h2>
+                <p>{{ user.about }}</p>
+                <p>Last updated: {{ user.updated }}</p>
+            </div>
+        </div>
+    </section>
+ </main>
