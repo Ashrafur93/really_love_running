@@ -10,6 +10,11 @@ class User(AbstractUser):
     created_at = models.DateTimeField(auto_now_add=True)
     last_login = models.DateTimeField(null=True, blank=True)
 
+    def save(self, *args, **kwargs):
+        if not self.email:
+            self.email = None
+        super().save(*args, **kwargs)
+
     def __str__(self):
         return self.username
 
