@@ -7,19 +7,29 @@
     <!-- Meet details section -->
     <section>
         <div class="container">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="banner">
+                <img src="{{post.banner_image.url}}" alt="Jogging Event Banner" class="img-fluid">
+            </div>
+            <br>
             <h1>Meet Details</h1>
             <p>Type | {{ post.type }}</p>
             <p>Distance | {{ post.distance }}{{ post.distance_unit }}</p>
-            <p>Date | {{ post.day_and_time }}</p>
+            <p>Day | {{ post.day }}</p>
+            <p>Time | {{ post.time }}</p>
             <p>Location | {{ post.location }}</p>
         </div>
         <div class="container">
             <p>Details:</p>
-            <p>{{ post.body }}</p>
+            <p>{{ post.body|safe }}</p>
         </div>
         <div class="container">
-            <p>Map:</p>
-            <p>{{ post.location_url }}</p>
+            <iframe src="{{ post.location_url }}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
     <!-- Comments section -->
