@@ -1,13 +1,23 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractUser
 from cloudinary.models import CloudinaryField
-# from posts.models import Post
 
-# Create your models here.
+# Custom User model
+
+
+class User(AbstractUser):
+    email = models.EmailField(unique=True, null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    last_login = models.DateTimeField(null=True, blank=True)
+
+    def __str__(self):
+        return self.username
+
+# Profile model
+
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    # role = models.CharField(max_length=100, blank=True)
     profile_image = CloudinaryField('image', default='placeholder')
     name = models.CharField(max_length=100, blank=True)
     birth_date = models.DateField(null=True, blank=True)
@@ -18,9 +28,6 @@ class Profile(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     jogging_goals = models.CharField(max_length=100, blank=True)
-    # jogging_events = models.ManyToManyField(Post, related_name='purchased_games', blank=True)
-
-    
 
     def __str__(self):
         return f'{self.user.username} Profile'
