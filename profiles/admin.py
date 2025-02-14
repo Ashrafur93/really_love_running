@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Profile, CustomUser
+from .models import Profile, User
 from django.contrib.auth.admin import UserAdmin
 from django_summernote.admin import SummernoteModelAdmin
 
@@ -12,6 +12,6 @@ class PostAdmin(SummernoteModelAdmin):
     summernote_fields = '__all__'
 
 
-admin.site.register(CustomUser, UserAdmin)
+admin.site.register(User, UserAdmin)
 # admin.site.register(Profile)
 # admin.site.unregister(User)
