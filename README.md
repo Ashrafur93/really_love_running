@@ -45,37 +45,73 @@ Really Love Running is designed to create a supportive community for runners of 
 #### Mobile
 
 <details><summary>Home</summary>
-<img src="">
+<img src="./documentation/images/Home - Mobile.PNG">
+</details>
+<details><summary>Meetup</summary>
+<img src="./documentation/images/Meetup - Mobile.PNG">
+</details>
+<details><summary>Profile</summary>
+<img src="./documentation/images/Profile - Mobile.PNG">
+</details>
+<details><summary>Gallery</summary>
+<img src="./documentation/images/Gallery - Mobile.PNG">
 </details>
 <details><summary>Signup</summary>
-<img src="">
+<img src="./documentation/images/Signup - Mobile.PNG">
 </details>
-<details><summary>Signin</summary>
-<img src="">
+<details><summary>Login</summary>
+<img src="./documentation/images/Login - Mobile.PNG">
+</details>
+<details><summary>Logout</summary>
+<img src="./documentation/images/Logout - Mobile.PNG">
 </details>
 
 #### Tablet
 
 <details><summary>Home</summary>
-<img src="">
+<img src="./documentation/images/Home - Tablet.PNG">
+</details>
+<details><summary>Meetup</summary>
+<img src="./documentation/images/Meetup - Tablet.PNG">
+</details>
+<details><summary>Profile</summary>
+<img src="./documentation/images/Profile - Tablet.PNG">
+</details>
+<details><summary>Gallery</summary>
+<img src="./documentation/images/Gallery - Tablet.PNG">
 </details>
 <details><summary>Signup</summary>
-<img src="">
+<img src="./documentation/images/Signup - Tablet.PNG">
 </details>
-<details><summary>Signin</summary>
-<img src="">
+<details><summary>Login</summary>
+<img src="./documentation/images/Login - Tablet.PNG">
+</details>
+<details><summary>Logout</summary>
+<img src="./documentation/images/Logout - Tablet.PNG">
 </details>
 
 #### Desktop
 
 <details><summary>Home</summary>
-<img src="">
+<img src="./documentation/images/Home - Mobile.PNG">
+</details>
+<details><summary>Meetup</summary>
+<img src="./documentation/images/Meetup - Desktop.PNG">
+</details>
+<details><summary>Profile</summary>
+<img src="./documentation/images/Profile - Desktop.PNG">
+</details>
+<details><summary>Gallery</summary>
+<img src="./documentation/images/Gallery - Desktop.PNG">
 </details>
 <details><summary>Signup</summary>
-<img src="">
+<img src="./documentation/images/Signup - Desktop.PNG">
 </details>
-<details><summary>Signin</summary>
-<img src="">
+<details><summary>Login</summary>
+<img src="./documentation/images/Login - Desktop.PNG">
+</details>
+<details><summary>Logout</summary>
+<img src="./documentation/images/Logout - Desktop.PNG">
 </details>
 
 ### Database Schema
@@ -131,3 +167,13 @@ Really Love Running is more than just a website; it's a community dedicated to p
 
 - [Remaker](https://remaker.ai/face-swap-free/) and [Fotor](https://www.fotor.com/apps/swapper/) were used to create face-swapped images.
 - README documentation ideas and content were from DarrachBarneveld's project, [CoolCoders-PP4](https://github.com/DarrachBarneveld/CoolCoders-PP4).
+
+- Images were taken from the following websites:
+  - https://www.parkregisbirmingham.co.uk/blog/best-enjoy-birminghams-canals/
+  - https://www.birmingham2022.com/venues/alexander-stadium
+  - https://www.parkrun.org.uk/cannonhill/
+  - https://www.birminghammail.co.uk/news/midlands-news/famous-birmingham-spot-everybody-knows-29936838
+  - https://visitbirmingham.com/listing/run-of-a-kind/140870101/
+  - https://commons.wikimedia.org/wiki/File:Profile_avatar_placeholder_large.png
+  - https://visitbirmingham.com/listing/run-of-a-kind/140870101/
+  - [Homepage, Gallery and Signup images were originally from Code Institute's Love Running project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LRFX101+6/courseware/e805068059af42af87681032aa64053f/92a91cf7fcee4361a2af651b7827a341/)
