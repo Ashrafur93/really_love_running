@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Post, Comment
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 
 class PostList:
@@ -24,6 +25,9 @@ def post_detail(request, slug):
             Comment.objects.create(user=request.user, post=post, body=body)
             return redirect('post_detail', slug=slug)
         else:
-            return redirect('login')  # Redirect to login if user is not authenticated
+            messages.error(request, 'You need to log in to add a comment.')
+            return redirect('post_detail', slug=slug)  # Redirect back to the same page
 
     return render(request, 'jogging_post/jogging_post.html', {'post': post, 'comments': comments})
+
+
