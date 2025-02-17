@@ -29,7 +29,11 @@
             <p>{{ post.body|safe }}</p>
         </div>
         <div class="container">
+            {% if post.location_url %}
             <iframe src="{{ post.location_url }}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            {% else %}
+            <p>Location map is not available.</p>
+            {% endif %}
         </div>
     </section>
     <!-- Comments section -->

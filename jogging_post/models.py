@@ -37,8 +37,8 @@ class Post(models.Model):
     day = models.CharField(choices=DAY_CHOICES, default='Monday')
     day_int = models.IntegerField(default=0)
     location_short = models.CharField(max_length=100, default='Birmingham')
-    location = models.CharField(max_length=100, default='Birmingham, City Centre, B1 1AA')  # noqa for flake8
-    location_url = models.URLField(max_length=200, blank=True, default='https://maps.app.goo.gl/j4xrUjyJCYmN6guS9')  # noqa for flake8
+    location = models.CharField(max_length=100, default='Birmingham, City Centre, B1 1AA')
+    location_url = models.URLField(max_length=1000, blank=True)
     body = models.TextField()
     background_image = CloudinaryField('image', default='placeholder')
     icon = models.TextField(max_length=300, default='fa-solid fa-city')
