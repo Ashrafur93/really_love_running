@@ -4,7 +4,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import DetailView, UpdateView, DeleteView
 from .models import Profile
 from .forms import ProfileForm
-from django.contrib.auth.models import User
 from django.contrib.auth import logout
 
 class ProfileDetailedView(LoginRequiredMixin, DetailView):

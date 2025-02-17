@@ -41,7 +41,7 @@
             <div class="container-fluid">
                 <!-- Logo on the left -->
                 <a href="{% url 'home' %}" class="navbar-brand">
-                    <h1 id="logo" class="mb-0"><i>Really </i>Love Running</h1>
+                    <h1 id="logo" class="mb-0"><i style="font-size: xx-small;">Really </i>Love Running</h1>
                 </a>
 
                 <!-- Collapsing burger menu button on the right -->
@@ -97,8 +97,7 @@
             <div class="row">
                 <div class="col-md-8 offset-md-2">
                     {% for message in messages %}
-                    <div class="alert {{ message.tags }} alert-dismissible
-          fade show" id="msg" role="alert">
+                    <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
                         {{ message | safe }}
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
@@ -106,51 +105,53 @@
                 </div>
             </div>
         </div>
-        <main class="flex-shrink-0 main-bg">
-            {% if user.is_authenticated %}
-            <p class="text-end m-1">You are logged in as {{ user }}</p>
-            {% else %}
-            <p class="text-end m-1">You are not logged in</p>
-            {% endif %}
     </div>
-            {% block content %}
-            <!-- Content Goes here -->
-            {% endblock content %}
-        </main>
+    <main class="flex-shrink-0 main-bg">
+        {% if user.is_authenticated %}
+        <p class="text-end m-1">You are logged in as {{ user }}</p>
+        {% else %}
+        <p class="text-end m-1">You are not logged in</p>
+        {% endif %}
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-3 py-2 dark-bg">
+        <ul id="social-networks" style="margin-bottom: 0; padding-left: 0;">
+            <li><a class=footer-links href="https://www.github.com/Ashrafur93" target="_blank" rel="noopener"
+                    aria-label="Visit our Facebook page (opens in a new tab)">
+                    <i class="footer-logo fa-brands fa-github"></i>AA</a>
+            </li>
+            <li><a class=footer-links href="https://github.com/charlieflockhart" target="_blank" rel="noopener"
+                    aria-label="Visit our Twitter page (opens in a new tab)">
+                    <i class="fa-brands fa-github"></i>CF</a>
+            </li>
+            <li><a class=footer-links href="https://www.github.com/jackgroves2024" target="_blank" rel="noopener"
+                    aria-label="Visit our YouTube page (opens in a new tab)">
+                    <i class="fa-brands fa-github"></i>JG</a>
+            </li>
+            <li><a class=footer-links href="https://www.github.com/CharlesTack" target="_blank" rel="noopener"
+                    aria-label="Visit our Instagram page (opens in a new tab)">
+                    <i class="fa-brands fa-github"></i>CT</a>
+            </li>
+        </ul>
+    </footer>
+
     
-        <!-- Footer -->
-        <footer class="footer mt-3 py-2 dark-bg">
-            <ul id="social-networks" style="margin-bottom: 0;">
-                <li><a class=footer-links href="https://www.github.com/Ashrafur93" target="_blank" rel="noopener"
-                        aria-label="Visit our Facebook page (opens in a new tab)">
-                        <i class="footer-logo fa-brands fa-github"></i>AA</a>
-                </li>
-                <li><a class=footer-links href="https://github.com/charlieflockhart" target="_blank" rel="noopener"
-                        aria-label="Visit our Twitter page (opens in a new tab)">
-                        <i class="fa-brands fa-github"></i>CF</a>
-                </li>
-                <li><a class=footer-links href="https://www.github.com/jackgroves2024" target="_blank" rel="noopener"
-                        aria-label="Visit our YouTube page (opens in a new tab)">
-                        <i class="fa-brands fa-github"></i>JG</a>
-                </li>
-                <li><a class=footer-links href="https://www.github.com/CharlesTack" target="_blank" rel="noopener"
-                        aria-label="Visit our Instagram page (opens in a new tab)">
-                        <i class="fa-brands fa-github"></i>CT</a>
-                </li>
-            </ul>
-        </footer>
 
-        <!-- Font Awesome kit -->
-        <script src="https://kit.fontawesome.com/17f6269fc0.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome kit -->
+    <script src="https://kit.fontawesome.com/17f6269fc0.js" crossorigin="anonymous"></script>
 
-        <!-- Bootstrap JS Sheet -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
+    <!-- Bootstrap JS Sheet -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 
 
-        {% block extras %}
-        {% endblock %}
+    {% block extras %}
+    {% endblock %}
 </body>
 
 </html>
