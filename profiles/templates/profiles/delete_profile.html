@@ -2,10 +2,16 @@
 {% load static %}
 {% block content %}
 <main>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <section id="delete-profile">
         <div class="container">
-            <h1>Delete Profile</h1>
-            <p>Are you sure you want to delete your profile?</p>
+            <h1>Delete Profile & User Records</h1>
+            <p>Are you sure you want to delete your profile and user records? This action cannot be undone.</p>
             <form method="POST">
                 {% csrf_token %}
                 <button type="submit" class="btn btn-danger">Delete</button>
