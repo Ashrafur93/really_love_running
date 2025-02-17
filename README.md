@@ -225,7 +225,7 @@ The entity relationship diagram was built using [DBDiagram](https://dbdiagram.io
 | Home     | Navbar             | Links have hover effect (underline)                          | Pass      |                     |
 | Home     | Navbar             | Clicking on link consistently gives active indicator         | Pass      |                     |
 | Home     | Navbar             | Stays at top when scrolling                                  | Pass      |                     |
-| Home     | Navbar             | Login status appears top right                               | Fail      | Disappeared late on |
+| Home     | Navbar             | Login status appears top right                               |       |  |
 | Home     | Meet Up Cards      | Cards dim when hovered over                                  | Pass      |                     |
 | Home     | Meet Up Cards      | Cards take you to the right page when clicked                | Pass      |                     |
 | Home     | Footer             | Github links work correctly                                  | Pass      |                     |
