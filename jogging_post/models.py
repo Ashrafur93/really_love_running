@@ -25,24 +25,25 @@ DAY_CHOICES = [
     ('Sunday', 'Sunday'),
 ]
 
+
 class Post(models.Model):
     enabled = models.BooleanField(default=True)
     title = models.CharField(max_length=100, default='Jogging Event')
     slug = models.SlugField(max_length=200, unique=True)
-    type = models.CharField(max_length=6, choices=TYPE_CHOICES, default='Urban')
+    type = models.CharField(max_length=6, choices=TYPE_CHOICES, default='Urban')  # noqa for flake8
     distance = models.FloatField(default=0.0)
-    distance_unit = models.CharField(max_length=2, choices=DISTANCE_CHOICES, default='KM')
+    distance_unit = models.CharField(max_length=2, choices=DISTANCE_CHOICES, default='KM')  # noqa for flake8
     time = models.TimeField(default=None, null=True)
     day = models.CharField(choices=DAY_CHOICES, default='Monday')
     day_int = models.IntegerField(default=0)
     location_short = models.CharField(max_length=100, default='Birmingham')
-    location = models.CharField(max_length=100, default='Birmingham, City Centre, B1 1AA')
-    location_url = models.URLField(max_length=200, blank=True, default='https://maps.app.goo.gl/j4xrUjyJCYmN6guS9')
+    location = models.CharField(max_length=100, default='Birmingham, City Centre, B1 1AA')  # noqa for flake8
+    location_url = models.URLField(max_length=200, blank=True, default='https://maps.app.goo.gl/j4xrUjyJCYmN6guS9')  # noqa for flake8
     body = models.TextField()
     background_image = CloudinaryField('image', default='placeholder')
     icon = models.TextField(max_length=300, default='fa-solid fa-city')
     banner_image = CloudinaryField('image', default='placeholder')
-    # partisipant_list = models.ManyToManyField('Profile', related_name='jogging_events', blank=True)
+    # partisipant_list = models.ManyToManyField('Profile', related_name='jogging_events', blank=True)  # noqa for flake8
 
     def save(self, *args, **kwargs):
         day_mapping = {
@@ -92,7 +93,7 @@ class Post(models.Model):
     class Meta:
         verbose_name = 'Post'
         verbose_name_plural = 'Posts'
-    
+
     def get_readonly_fields(self, request, obj=None):
         if obj:
             return ['day_int', 'icon', 'title', 'slug']
@@ -101,6 +102,7 @@ class Post(models.Model):
 
 class Comment(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
     body = models.TextField(max_length=300)
     created_at = models.DateTimeField(auto_now_add=True)
 
