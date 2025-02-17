@@ -48,8 +48,6 @@ Really Love Running is designed to create a supportive community for runners of 
 
 ### Wireframes
 
-The wireframes were built using [Balsamiq](https://balsamiq.com/):
-
 #### Mobile
 
 <details><summary>Home</summary>
@@ -158,10 +156,31 @@ The entity relationship diagram was built using [DBDiagram](https://dbdiagram.io
   - Sensitive data is stored in environment variables.
   - DEBUG mode is disabled in the production environment to enhance security.
 
+## AI Implementation and Orchestration
+- AI tools streamlined repetitive tasks, enabling focus on high-level development.
+- Efficiency gains included faster debugging, comprehensive testing, and improved code quality.
+- Challenges included contextual adjustments to AI-generated outputs, which were resolved effectively, enhancing inclusivity.
+
 ## Testing
 
 ### Lighthouse
   <details><summary>Home</summary>
+  <img src="./documentation/images/Lighthouse - Home.PNG">
+  </details>
+
+  <details><summary>Meetup</summary>
+  <img src="./documentation/images/Lighthouse - Meetup.PNG">
+  </details>
+
+  <details><summary>Gallery</summary>
+  <img src="./documentation/images/Lighthouse - Gallery.PNG">
+  </details>
+
+  <details><summary>Profile</summary>
+  <img src="">
+  </details>
+
+   <details><summary>Signup</summary>
   <img src="">
   </details>
 
@@ -204,8 +223,9 @@ Really Love Running is more than just a website; it's a community dedicated to p
 ## Credits
 
 - [Microsoft Copilot](https://copilot.microsoft.com/) was used for AI tech support.
+- The wireframes were built using [Balsamiq](https://balsamiq.com/).
 - [Remaker](https://remaker.ai/face-swap-free/) and [Fotor](https://www.fotor.com/apps/swapper/) were used to create face-swapped images.
-- README documentation ideas and content were from DarrachBarneveld's project, [CoolCoders-PP4](https://github.com/DarrachBarneveld/CoolCoders-PP4).
+- README documentation ideas and content were from [Code Institute's template](https://github.com/Code-Institute-Org/html-css-project/blob/main/full-stack-capstone-readme.md) and DarrachBarneveld's project, [CoolCoders-PP4](https://github.com/DarrachBarneveld/CoolCoders-PP4).
 
 - Testing and validation was done using the following:
   - [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview)
