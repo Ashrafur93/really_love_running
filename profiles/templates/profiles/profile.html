@@ -6,10 +6,12 @@
  <main>
     <section id="profile">
         <div class="container">
+            <br>
+            <br>
             <h1>Profile Page</h1>
             <h2>Profile Picture</h2>
-            <div class="col-12 col-md-4 text-center mb-2">
-                {% if "placeholder" in about.profile_image.url %}
+            <div class="col-12 col-md-4 mb-2">
+                {% if "placeholder" in profile.profile_image.url %}
                 <img src="{% static 'assets/images/placeholder.png' %}" style="width: 75%;"
                     alt="placeholder for missing profile image">
                 {% else %}
@@ -17,19 +19,9 @@
                     alt="Image of {{ profile.name }}">
                 {% endif %}
                 </div>
-            <!-- Form to upload/change profile picture -->
-            <h2>Change Profile Picture</h2>
-            <form method="POST" enctype="multipart/form-data">
-                {% csrf_token %}
-                <div class="mb-3">
-                    <label for="profile_image" class="form-label">Upload New Profile Picture</label>
-                    <input type="file" class="form-control" id="profile_image" name="profile_image">
-                </div>
-                <button type="submit" class="btn btn-primary">Upload</button>
-            </form>
             <!-- Profile data -->
             <div class="row">
-                <div class="col-md-8 offset-md-2">
+                <div class="col-md-8">
                     <h2>Profile</h2>
                     <p>Username: {{ profile.user }}</p>
                     <p>Name: {{ profile.name }}</p>
@@ -43,18 +35,22 @@
             </div>
 
             <div class="row">
-                <h2>About Me</h2>
-                <p>{{ profile.bio }}</p>
-                <p>Last updated: {{ profile.updated_at }}</p>
+                <div class="col-md-8">
+                    <h2>About Me</h2>
+                    <p>Bio: {{ profile.bio }}</p>
+                    <p>Last updated: {{ profile.updated_at }}</p>
+                </div>
             </div>
 
             <!-- Edit and Delete buttons -->
             <div class="row mt-3">
-                <div class="col-md-8 offset-md-2">
-                    <a href="{% url 'edit_profile' profile.id %}" class="btn btn-warning">Edit Profile</a>
-                    <a href="{% url 'delete_profile' profile.id %}" class="btn btn-danger">Delete Profile</a>
+                <div class="col-md-8">
+                    <a href="{% url 'edit_profile' %}" class="btn btn-warning">Edit Profile</a>
+                    <a href="{% url 'delete_profile' %}" class="btn btn-danger">Delete Profile</a>
                 </div>
             </div>
         </div>
     </section>
- </main>
+</main>
+
+{% endblock %}

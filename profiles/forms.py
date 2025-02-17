@@ -9,3 +9,6 @@ class ProfileForm(forms.ModelForm):
             'profile_image', 'name', 'birth_date', 'location', 'favourite_run',
             'favourite_music', 'jogging_goals', 'bio'
         ]
+        widgets = {
+            'birth_date': forms.DateInput(attrs={'type': 'date'}),
+        }

@@ -11,6 +11,6 @@ class PostAdmin(SummernoteModelAdmin):
 @admin.register(Comment)
 class CommentAdmin(SummernoteModelAdmin):
     summernote_fields = '__all__'
-    
+
     def __str__(self):
         return self.title

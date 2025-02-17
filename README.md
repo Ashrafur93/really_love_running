@@ -158,15 +158,26 @@ The entity relationship diagram was built using [DBDiagram](https://dbdiagram.io
   - Sensitive data is stored in environment variables.
   - DEBUG mode is disabled in the production environment to enhance security.
 
-## AI Implementation and Orchestration
-- Copilot was extremely helpful in debugging in-line code as well as file corrections, we also used it for other ideation work.
-- Efficiency gains included faster debugging, comprehensive testing, and improved code quality.
-- Challenges included contextual adjustments to AI-generated outputs, which were resolved effectively, enhancing inclusivity.
-
 ## Testing
 
 ### Lighthouse
   <details><summary>Home</summary>
+  <img src="./documentation/images/Lighthouse - Home.PNG">
+  </details>
+
+  <details><summary>Meetup</summary>
+  <img src="./documentation/images/Lighthouse - Meetup.PNG">
+  </details>
+
+  <details><summary>Gallery</summary>
+  <img src="./documentation/images/Lighthouse - Gallery.PNG">
+  </details>
+
+  <details><summary>Profile</summary>
+  <img src="">
+  </details>
+
+   <details><summary>Signup</summary>
   <img src="">
   </details>
 
@@ -195,6 +206,85 @@ The entity relationship diagram was built using [DBDiagram](https://dbdiagram.io
   <img src="">
   </details>
 
+### Manual testing
+
+| Location | Feature            | Expected Outcome                                             | Pass/Fail | Notes               |
+| -------- | ------------------ | ------------------------------------------------------------ | --------- | ------------------- |
+| Home     | Navbar             | Clicking on home takes the user to home                      | Pass      |                     |
+| Home     | Navbar             | Clicking on logo takes the user to home                      | Pass      |                     |
+| Home     | Navbar             | Clicking on Gallery takes the user to the gallery page       | Pass      |                     |
+| Home     | Navbar             | Clicking on Profile takes the user to the profile page       | Pass      |                     |
+| Home     | Navbar             | Clicking on logout takes the user to the sign out page       | Pass      |                     |
+| Home     | Navbar             | Register link only appears when user logged out              | Pass      |                     |
+| Home     | Navbar             | Login link only appears when user logged out                 | Pass      |                     |
+| Home     | Navbar             | Clicking on Regsiter takes the user to register page         | Pass      |                     |
+| Home     | Navbar             | Logout link only appears when user logged in                 | Pass      |                     |
+| Home     | Navbar             | Clicking on Login takes the user to Log In page              | Pass      |                     |
+| Home     | Navbar             | Admin link only appears to superusers                        | Pass      |                     |
+| Home     | Navbar             | Clicking on admin link takes the superuser to the admin page | Pass      |                     |
+| Home     | Navbar             | Links have hover effect (underline)                          | Pass      |                     |
+| Home     | Navbar             | Clicking on link consistently gives active indicator         | Pass      |                     |
+| Home     | Navbar             | Stays at top when scrolling                                  | Pass      |                     |
+| Home     | Navbar             | Login status appears top right                               | Fail      | Disappeared late on |
+| Home     | Meet Up Cards      | Cards dim when hovered over                                  | Pass      |                     |
+| Home     | Meet Up Cards      | Cards take you to the right page when clicked                | Pass      |                     |
+| Home     | Footer             | Github links work correctly                                  | Pass      |                     |
+| Logout   | Logout             | User is logged out when clicked on Sign Out button           | Pass      |                     |
+| Gallery  | Responsive images  | Images scale appropriately on different device sizes         | Pass      |                     |
+| Register | Form validation    | Form validation matches rules on the screen                  | Pass      |                     |
+| Register | Accepts new users  | New users are accepted on valid form submission              | Pass      |                     |
+| Login    | Form validation    | Access only allowed to registered users                      | Pass      |                     |
+| Register | Login              | User logged in on valid username and password                | Pass      |                     |
+| Home     | Responsiveness     | Screen correct at 320px (Mobile S)                           | Pass      |                     |
+| Home     | Responsiveness     | Screen correct at 375px (Mobile M)                           | Pass      |                     |
+| Home     | Responsiveness     | Screen correct at 425px (Mobile L)                           | Pass      |                     |
+| Home     | Responsiveness     | Screen correct at 768px (Tablet)                             | Pass      |                     |
+| Home     | Responsiveness     | Screen correct at 1024px (Laptop)                            | Pass      |                     |
+| Home     | Responsiveness     | Screen correct at 1440px (Laptop L)                          | Pass      |                     |
+| Home     | Responsiveness     | Screen correct at 2560px (4K)                                | Pass      |                     |
+| Meet up  | Comment Logged out | Logged out user cannot post a comment                        | Pass      |                     |
+| Meet up  | Comment Logged in  | Logged in user can post a comment                            | Pass      |                     |
+| Meet up  | Comment Logged in  | Logged in user can edit their own comment                    | Pass      |                     |
+| Meet up  | Comment            | Nobody can edit or delete anyone else's comments             | Pass      |                     |
+| Meet up  | Comment Logged in  | Logged in user can delete their own comment                  | Pass      |                     |
+| Gallery  | Responsiveness     | Screen correct at 320px (Mobile S)                           | Pass      |                     |
+| Gallery  | Responsiveness     | Screen correct at 375px (Mobile M)                           | Pass      |                     |
+| Gallery  | Responsiveness     | Screen correct at 425px (Mobile L)                           | Pass      |                     |
+| Gallery  | Responsiveness     | Screen correct at 768px (Tablet)                             | Pass      |                     |
+| Gallery  | Responsiveness     | Screen correct at 1024px (Laptop)                            | Pass      |                     |
+| Gallery  | Responsiveness     | Screen correct at 1440px (Laptop L)                          | Pass      |                     |
+| Gallery  | Responsiveness     | Screen correct at 2560px (4K)                                | Pass      |                     |
+| Profile  | Profile Info       | User can add and edit profile data including images          | Pass      |                     |
+| Profile  | Profile Delete     | User can delete their profile and user records               | Pass      |                     |
+| Profile  | Responsiveness     | Screen correct at 320px (Mobile S)                           | Pass      |                     |
+| Profile  | Responsiveness     | Screen correct at 375px (Mobile M)                           | Pass      |                     |
+| Profile  | Responsiveness     | Screen correct at 425px (Mobile L)                           | Pass      |                     |
+| Profile  | Responsiveness     | Screen correct at 768px (Tablet)                             | Pass      |                     |
+| Profile  | Responsiveness     | Screen correct at 1024px (Laptop)                            | Pass      |                     |
+| Profile  | Responsiveness     | Screen correct at 1440px (Laptop L)                          | Pass      |                     |
+| Profile  | Responsiveness     | Screen correct at 2560px (4K)                                | Pass      |                     |
+| Logout   | Responsiveness     | Screen correct at 320px (Mobile S)                           | Pass      |                     |
+| Logout   | Responsiveness     | Screen correct at 375px (Mobile M)                           | Pass      |                     |
+| Logout   | Responsiveness     | Screen correct at 425px (Mobile L)                           | Pass      |                     |
+| Logout   | Responsiveness     | Screen correct at 768px (Tablet)                             | Pass      |                     |
+| Logout   | Responsiveness     | Screen correct at 1024px (Laptop)                            | Pass      |                     |
+| Logout   | Responsiveness     | Screen correct at 1440px (Laptop L)                          | Pass      |                     |
+| Logout   | Responsiveness     | Screen correct at 2560px (4K)                                | Pass      |                     |
+| Register | Responsiveness     | Screen correct at 320px (Mobile S)                           | Pass      |                     |
+| Register | Responsiveness     | Screen correct at 375px (Mobile M)                           | Pass      |                     |
+| Register | Responsiveness     | Screen correct at 425px (Mobile L)                           | Pass      |                     |
+| Register | Responsiveness     | Screen correct at 768px (Tablet)                             | Pass      |                     |
+| Register | Responsiveness     | Screen correct at 1024px (Laptop)                            | Pass      |                     |
+| Register | Responsiveness     | Screen correct at 1440px (Laptop L)                          | Pass      |                     |
+| Register | Responsiveness     | Screen correct at 2560px (4K)                                | Pass      |                     |
+| Login    | Responsiveness     | Screen correct at 320px (Mobile S)                           | Pass      |                     |
+| Login    | Responsiveness     | Screen correct at 375px (Mobile M)                           | Pass      |                     |
+| Login    | Responsiveness     | Screen correct at 425px (Mobile L)                           | Pass      |                     |
+| Login    | Responsiveness     | Screen correct at 768px (Tablet)                             | Pass      |                     |
+| Login    | Responsiveness     | Screen correct at 1024px (Laptop)                            | Pass      |                     |
+| Login    | Responsiveness     | Screen correct at 1440px (Laptop L)                          | Pass      |                     |
+| Login    | Responsiveness     | Screen correct at 2560px (4K)                                | Pass      |                     |
+
 ## Future Enhancements
 
 - **Mobile App**: Development of a mobile application to provide users with on-the-go access to the platform.
@@ -214,7 +304,6 @@ Really Love Running is more than just a website; it's a community dedicated to p
 ## Credits
 
 - [Microsoft Copilot](https://copilot.microsoft.com/) was used for AI tech support.
-- The wireframes were built using [Balsamiq](https://balsamiq.com/).
 - [Remaker](https://remaker.ai/face-swap-free/) and [Fotor](https://www.fotor.com/apps/swapper/) were used to create face-swapped images.
 - README documentation ideas and content were from [Code Institute's template](https://github.com/Code-Institute-Org/html-css-project/blob/main/full-stack-capstone-readme.md) and DarrachBarneveld's project, [CoolCoders-PP4](https://github.com/DarrachBarneveld/CoolCoders-PP4).
 
