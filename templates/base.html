@@ -8,6 +8,7 @@
 {% url 'profiles' as profiles_url %}
 {% url 'edit_profile' as profiles_url %}
 {% url 'delete_profile' as profiles_url %}
+{% url 'admin:index' as admin_url %}
 
 <!DOCTYPE html>
 <html class="h-100" lang="en">
@@ -66,6 +67,12 @@
                             <a class="nav-link {% if request.path == '/profile/' %}active{% endif %}"
                                 href="{% url 'profile' %}">Profile</a>
                         </li>
+                        {% if user.is_superuser %}
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == '/admin/' %}active{% endif %}"
+                                href="{% url 'admin:index' %}">Admin</a>
+                        </li>
+                        {% endif %}
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == '/logout/' %}active{% endif %}"
                                 href="{% url 'account_logout' %}">Logout</a>
