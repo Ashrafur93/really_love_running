@@ -18,6 +18,7 @@ Really Love Running is designed to create a supportive community for runners of 
 - [Features](#features)
 - [Technology Stack](#technology-stack)
 - [Deployment](#deployment)
+- [AI Implementation and Orchestration](#ai-implementation-and-orchestration)
 - [Testing](#testing)
   - [Lighthouse](#lighthouse)
   - [HTML validation](html-validation)
