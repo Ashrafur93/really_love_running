@@ -1,6 +1,6 @@
 # Really Love Running
 
-![Really Love Running screenshot](insert amiresponsive image)
+![Really Love Running screenshot](./documentation/images/Responsivity.PNG)
 
 (Developers: [Charles Tack](https://github.com/CharlesTack), [Charlie Flockhart](https://github.com/charlieflockhart), [Jack Groves](https://github.com/jackgroves2024), [Ashrafur Ahmed](https://github.com/Ashrafur93))
 
@@ -18,6 +18,12 @@ Really Love Running is designed to create a supportive community for runners of 
 - [Features](#features)
 - [Technology Stack](#technology-stack)
 - [Deployment](#deployment)
+- [Testing](#testing)
+  - [Lighthouse](#lighthouse)
+  - [HTML validation](html-validation)
+  - [CSS validation](#css-validation)
+  - [JS analysis tool](#js-analysis-tool)
+  - [Python linter](#python-linter)
 - [Future Enhancements](#future-enhancements)
 - [Conclusion](#conclusion)
 - [Credits](#credits)
@@ -152,6 +158,33 @@ The entity relationship diagram was built using [DBDiagram](https://dbdiagram.io
   - Sensitive data is stored in environment variables.
   - DEBUG mode is disabled in the production environment to enhance security.
 
+## Testing
+
+### Lighthouse
+  <details><summary>Home</summary>
+  <img src="">
+  </details>
+
+### HTML validation
+  <details><summary>Index</summary>
+  <img src="">
+  </details>
+
+### CSS validation
+  <details><summary>CSS</summary>
+  <img src="">
+  </details>
+
+### JS analysis tool
+  <details><summary>JS</summary>
+  <img src="">
+  </details>
+
+### Python linter
+  <details><summary>Python</summary>
+  <img src="">
+  </details>
+
 ## Future Enhancements
 
 - **Mobile App**: Development of a mobile application to provide users with on-the-go access to the platform.
@@ -170,9 +203,17 @@ Really Love Running is more than just a website; it's a community dedicated to p
 
 ## Credits
 
+- [Microsoft Copilot](https://copilot.microsoft.com/) was used for AI tech support.
 - [Remaker](https://remaker.ai/face-swap-free/) and [Fotor](https://www.fotor.com/apps/swapper/) were used to create face-swapped images.
 - README documentation ideas and content were from DarrachBarneveld's project, [CoolCoders-PP4](https://github.com/DarrachBarneveld/CoolCoders-PP4).
 
+- Testing and validation was done using the following:
+  - [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview)
+  - [Python linter](https://pep8ci.herokuapp.com/)
+  - [HTML validation](https://validator.w3.org/)
+  - [CSS validation](https://jigsaw.w3.org/css-validator/)
+  - [JS analysis tool](https://jshint.com/)
+ 
 - Images were taken from the following websites:
   - https://www.parkregisbirmingham.co.uk/blog/best-enjoy-birminghams-canals/
   - https://www.birmingham2022.com/venues/alexander-stadium
