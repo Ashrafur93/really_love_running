@@ -64,7 +64,7 @@
                         </li>
                         {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == '/profile/' %}active{% endif %}"
+                            <a class="nav-link {% if request.path == '/profiles/' %}active{% endif %}"
                                 href="{% url 'profile' %}">Profile</a>
                         </li>
                         {% if user.is_superuser %}
@@ -79,11 +79,11 @@
                         </li>
                         {% else %}
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == '/signup/' %}active{% endif %}"
+                            <a class="nav-link {% if request.path == '/accounts/signup/' %}active{% endif %}"
                                 href="{% url 'account_signup' %}">Register</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == '/login/' %}active{% endif %}"
+                            <a class="nav-link {% if request.path == '/accounts/login/' %}active{% endif %}"
                                 href="{% url 'account_login' %}">Login</a>
                         </li>
                         {% endif %}
