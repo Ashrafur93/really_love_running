@@ -183,28 +183,106 @@ The entity relationship diagram was built using [DBDiagram](https://dbdiagram.io
 
 ### HTML validation
   <details><summary>Index</summary>
-  <img src="">
+  <img src="/documentation/images/HTML_Validation/Home_Page_HTML_Validation.png">
+  </details>
+
+  <details><summary>Gallery</summary>
+  <img src="/documentation/images/HTML_Validation/Gallery_HTML_Validation.png">
+  </details>
+
+  <details><summary>Profiles</summary>
+  <img src="/documentation/images/HTML_Validation/Profiles_HTML_Validation.png">
+  </details>
+
+  <details><summary>Sign In</summary>
+  <img src="/documentation/images/HTML_Validation/Sign_In_HTML_Validation.png">
+  </details>
+
+  <details><summary>Sign Out</summary>
+  <img src="/documentation/images/HTML_Validation/Sign_Out_HTML_Validation.png">
+  </details>
+
+  <details><summary>Sign Up</summary>
+  <img src="/documentation/images/HTML_Validation/Sign_Up_HTML_Validation.png">
   </details>
 
 ### CSS validation
   <details><summary>CSS</summary>
-  <img src="">
-  </details>
-
-### Contrast checker
-  <details><summary>Contrast</summary>
-  <img src="">
-  </details>
-
-### JS analysis tool
-  <details><summary>JS</summary>
-  <img src="">
+  <img src="/documentation/images/CSS_Validation/CSS_Validated.png">
   </details>
 
 ### Python linter
-  <details><summary>Python</summary>
-  <img src="">
-  </details>
+  #### Home
+    <details><summary>Apps</summary>
+    <img src="/documentation/images/Python_Validation/Home/Home_Apps_py.png">
+    </details>
+
+    <details><summary>Urls</summary>
+    <img src="/documentation/images/Python_Validation/Home/Home_urls_py.png">
+    </details>
+
+    <details><summary>Views</summary>
+    <img src="/documentation/images/Python_Validation/Home/Home_views_py.png">
+    </details>
+
+  #### Jogging Post
+    <details><summary>Admin</summary>
+    <img src="/documentation/images/Python_Validation/Jogging_post/Jogging_post_admin_py.png">
+    </details>
+
+    <details><summary>Apps</summary>
+    <img src="/documentation/images/Python_Validation/Jogging_post/Jogging_post_apps_py.png">
+    </details>
+
+    <details><summary>Models</summary>
+    <img src="/documentation/images/Python_Validation/Jogging_post/Jogging_post_models_py.png">
+    </details>
+
+    <details><summary>Urls</summary>
+    <img src="/documentation/images/Python_Validation/Jogging_post/Jogging_post_urls_py.png">
+    </details>
+
+    <details><summary>Views</summary>
+    <img src="/documentation/images/Python_Validation/Jogging_post/Jogging_post_views_py.png">
+    </details>
+
+  #### Profiles
+    <details><summary>Admin</summary>
+    <img src="/documentation/images/Python_Validation/Profiles/Profiles_admin_py.png">
+    </details>
+
+    <details><summary>Apps</summary>
+    <img src="/documentation/images/Python_Validation/Profiles/Profiles_apps_py.png">
+    </details>
+
+    <details><summary>Forms</summary>
+    <img src="/documentation/images/Python_Validation/Profiles/Profiles_forms_py.png">
+    </details>
+
+    <details><summary>Models</summary>
+    <img src="/documentation/images/Python_Validation/Profiles/Profiles_models_py.png">
+    </details>
+
+    <details><summary>Urls</summary>
+    <img src="/documentation/images/Python_Validation/Profiles/Profiles_urls_py.png">
+    </details>
+
+    <details><summary>Views</summary>
+    <img src="/documentation/images/Python_Validation/Profiles/Profiles_views_py.png">
+    </details>
+
+  #### Really Love Running 
+    <details><summary>Urls</summary>
+    <img src="/documentation/images/Python_Validation/Really_Love_Running/Really_love_running_urls_py.png">
+    </details>
+
+    <details><summary>Asgi</summary>
+    <img src="/documentation/images/Python_Validation/Really_Love_Running/Really_love_running_asgi_py.png">
+    </details>
+
+    <details><summary>Wsgi</summary>
+    <img src="/documentation/images/Python_Validation/Really_Love_Running/Really_love_running_wsgi_py.png">
+    </details>
 
 ### Manual testing
 
