@@ -55,10 +55,6 @@ header a {
     justify-content: flex-end; /* Align links to the right */
 }
 
-#menu > li {
-    /* margin-left: 1rem; Add spacing between nav items */
-}
-
 .active {
     border-bottom: 1px solid #3a3a3a;
 }
@@ -94,7 +90,7 @@ nav {
 }
 
 #header-and-messages {
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     width: 100%;
     z-index: 1000; /* Ensure it stays on top of other elements */
@@ -312,10 +308,6 @@ main {
         display: flex;
     }
 
-    #menu > li {
-        /* margin-left: 1rem; */
-    }
-
     .nav-toggle-label {
         display: none;
     }
@@ -325,12 +317,6 @@ main {
         line-height: 75px; */
         margin: 0 0.5rem;
         margin-right: auto;
-    }
-
-    /* Main content */
-    main {
-        /* Push main content down to accomodate larger header */
-        /* margin-top: 79px; */
     }
 
     /* Hero */
