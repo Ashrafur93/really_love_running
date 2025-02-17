@@ -8,6 +8,7 @@ class PostAdmin(SummernoteModelAdmin):
     summernote_fields = '__all__'
     prepopulated_fields = {'slug': ('title',)}
 
+    
 @admin.register(Comment)
 class CommentAdmin(SummernoteModelAdmin):
     summernote_fields = '__all__'
