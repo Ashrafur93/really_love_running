@@ -223,6 +223,7 @@ Really Love Running is more than just a website; it's a community dedicated to p
 ## Credits
 
 - [Microsoft Copilot](https://copilot.microsoft.com/) was used for AI tech support.
+- The responsivity image was made from [amiresponsive](https://ui.dev/amiresponsive) using the [Allow X-Frame-Options](https://chromewebstore.google.com/detail/allow-x-frame-options/jfjdfokifdlmbkbncmcfbcobggohdnif?hl=en) Chrome extension.
 - The wireframes were built using [Balsamiq](https://balsamiq.com/).
 - [Remaker](https://remaker.ai/face-swap-free/) and [Fotor](https://www.fotor.com/apps/swapper/) were used to create face-swapped images.
 - README documentation ideas and content were from [Code Institute's template](https://github.com/Code-Institute-Org/html-css-project/blob/main/full-stack-capstone-readme.md) and DarrachBarneveld's project, [CoolCoders-PP4](https://github.com/DarrachBarneveld/CoolCoders-PP4).
