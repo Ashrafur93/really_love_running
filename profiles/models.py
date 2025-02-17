@@ -1,6 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from cloudinary.models import CloudinaryField
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+
 
 # Custom User model
 
@@ -46,3 +49,15 @@ class Profile(models.Model):
     #         output_size = (300, 300)
     #         img.thumbnail(output_size)
     #         img.save(self.profile_image.path)
+
+
+# Create or update the user profile
+# This function creates or updates the user profile
+# It is called when a user is created or updated
+@receiver(post_save, sender=User)
+def create_or_update_user_profile(instance, created, **kwargs):
+    """
+    Create or update the user profile
+    """
+    if created:
+        Profile.objects.create(user=instance)

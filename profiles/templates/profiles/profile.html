@@ -43,18 +43,22 @@
             </div>
 
             <div class="row">
-                <h2>About Me</h2>
-                <p>{{ profile.bio }}</p>
-                <p>Last updated: {{ profile.updated_at }}</p>
+                <div class="col-md-8 offset-md-2">
+                    <h2>About Me</h2>
+                    <p>Bio: {{ profile.bio }}</p>
+                    <p>Last updated: {{ profile.updated_at }}</p>
+                </div>
             </div>
 
             <!-- Edit and Delete buttons -->
             <div class="row mt-3">
                 <div class="col-md-8 offset-md-2">
-                    <a href="{% url 'edit_profile' profile.id %}" class="btn btn-warning">Edit Profile</a>
-                    <a href="{% url 'delete_profile' profile.id %}" class="btn btn-danger">Delete Profile</a>
+                    <a href="{% url 'edit_profile' %}" class="btn btn-warning">Edit Profile</a>
+                    <a href="{% url 'delete_profile' %}" class="btn btn-danger">Delete Profile</a>
                 </div>
             </div>
         </div>
     </section>
- </main>
+</main>
+
+{% endblock %}
