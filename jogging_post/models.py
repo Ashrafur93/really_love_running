@@ -93,7 +93,7 @@ class Post(models.Model):
     class Meta:
         verbose_name = 'Post'
         verbose_name_plural = 'Posts'
-    
+
     def get_readonly_fields(self, request, obj=None):
         if obj:
             return ['day_int', 'icon', 'title', 'slug']
@@ -101,9 +101,10 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)  # noqa for flake8
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
     body = models.TextField(max_length=300)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.user.username} | {self.body.replace('<p>', '').replace('</p>', '')[:30]} | {self.created_at}"  # noqa for flake8
+        return f"{self.user.username} | {self.body.replace('<p>', '').replace('</p>', '')[:30]} | {self.created_at}"
