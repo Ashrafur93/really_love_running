@@ -42,6 +42,8 @@ Really Love Running is designed to create a supportive community for runners of 
 
 ### Wireframes
 
+The wireframes were built using [Balsamiq](https://balsamiq.com/):
+
 #### Mobile
 
 <details><summary>Home</summary>
@@ -116,6 +118,8 @@ Really Love Running is designed to create a supportive community for runners of 
 
 ### Database Schema
 
+The entity relationship diagram was built using [DBDiagram](https://dbdiagram.io/home):
+
 <details><summary>Database Schema screenshot</summary>
 <img src="./documentation/images/ERD.PNG">
 </details>
@@ -131,6 +135,7 @@ Really Love Running is designed to create a supportive community for runners of 
 - **Frontend**: HTML, CSS, JavaScript, and Bootstrap for responsive design.
 - **Backend**: Django framework with Python for robust and scalable web application development.
 - **Database**: PostgreSQL for reliable data storage and management.
+- **Media**: Cloudinary for image hosting.
 
 ## Deployment
 
