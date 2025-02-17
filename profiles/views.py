@@ -8,7 +8,7 @@ from .forms import ProfileForm
 
 class ProfileDetailedView(DetailView, LoginRequiredMixin):
     model = Profile
-    template_name = "account_profile/account_profile.html"
+    template_name = "profiles/profile.html"
     context_object_name = "profile"
 
     def get_object(self):
