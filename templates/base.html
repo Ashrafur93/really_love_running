@@ -105,18 +105,18 @@
                 </div>
             </div>
         </div>
-        <main class="flex-shrink-0 main-bg">
-            {% if user.is_authenticated %}
-            <p class="text-end m-1">You are logged in as {{ user }}</p>
-            {% else %}
-            <p class="text-end m-1">You are not logged in</p>
-            {% endif %}
-            {% block content %}
-            <!-- Content Goes here -->
-            {% endblock content %}
-        </main>
     </div>
-    
+    <main class="flex-shrink-0 main-bg">
+        {% if user.is_authenticated %}
+        <p class="text-end m-1">You are logged in as {{ user }}</p>
+        {% else %}
+        <p class="text-end m-1">You are not logged in</p>
+        {% endif %}
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+    </main>
+
     <!-- Footer -->
     <footer class="footer mt-3 py-2 dark-bg">
         <ul id="social-networks" style="margin-bottom: 0; padding-left: 0;">
