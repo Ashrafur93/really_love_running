@@ -94,7 +94,7 @@ nav {
 }
 
 #header-and-messages {
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     width: 100%;
     z-index: 1000; /* Ensure it stays on top of other elements */
